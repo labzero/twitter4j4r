@@ -1,0 +1,6 @@
+#twitter4j4r_settings.yml - copy to user.home dir
+twitter:
+  oauth_token: 'xxxxxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  oauth_token_secret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+  consumer_key: 'xxxxxxxxxxxxxxxxxxxxxx'
+  consumer_secret: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'

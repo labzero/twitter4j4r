@@ -7,6 +7,12 @@ module Twitter4j4r
       @blocks = blocks
     end
 
+    def call_block_with_client(block_key, *args)
+      if block = @blocks[block_key]
+        block.call(*((args + [@client])[0, block.arity]))
+      end
+    end
+
     [[ :onException,               :exception ],
      [ :onDeletionNotice,          :delete ],
      [ :onBlock,                   :block ],
@@ -32,12 +38,5 @@ module Twitter4j4r
       end
     end
 
-    protected
-
-    def call_block_with_client(block_key, *args)
-      if block = @blocks[block_key]
-        block.call(*((args + [@client])[0, block.arity]))
-      end
-    end
   end
 end

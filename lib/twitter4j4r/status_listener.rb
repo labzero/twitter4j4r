@@ -7,6 +7,12 @@ module Twitter4j4r
       @blocks = blocks
     end
 
+    def call_block_with_client(block_key, *args)
+      if block = @blocks[block_key]
+        block.call(*((args + [@client])[0, block.arity]))
+      end
+    end
+
     [[ :onStatus,                 :status ],
      [ :onException,              :exception ],
      [ :onTrackLimitationNotice,  :limitation ]
@@ -16,6 +22,7 @@ module Twitter4j4r
       end
     end
   end
+
 end
 
 Twitter4j4r::StatusListener.become_java!

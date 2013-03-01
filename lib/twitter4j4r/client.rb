@@ -1,6 +1,6 @@
-require 'jar/twitter4j-core-3.0.2.jar'
-require 'jar/twitter4j-stream-3.0.2.jar'
-require 'jar/twitter4j-async-3.0.2.jar'
+require 'jar/twitter4j-core-3.0.3.jar'
+require 'jar/twitter4j-stream-3.0.3.jar'
+require 'jar/twitter4j-async-3.0.3.jar'
 
 require 'jruby/core_ext'
 

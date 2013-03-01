@@ -38,5 +38,6 @@ module Twitter4j4r
         block.call(*((args + [@client])[0, block.arity]))
       end
     end
+
   end
 end
