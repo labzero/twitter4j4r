@@ -32,6 +32,8 @@ class UserstreamTest < Test::Unit::TestCase
     end
 
     @client.on_status do |status|
+      status_hash = Twitter4j4r::Util.status_to_hash(status)
+      assert_not_nil status_hash['id'], status_hash
       @client.stop
       status_ok = true
       assert true, "#{status.user.screen_name} => #{status.text}"
